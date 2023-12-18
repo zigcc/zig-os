@@ -10,4 +10,7 @@ pub export fn _start() callconv(.Naked) noreturn {
         : [start] "X" (&start),
     );
 }
-fn start() void {}
+
+fn start() void {
+    std.debug.print("{any}\n", .{"hello"});
+}
